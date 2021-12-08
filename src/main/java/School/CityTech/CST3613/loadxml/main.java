@@ -1,0 +1,28 @@
+package School.CityTech.CST3613.loadxml;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class main {
+
+    public static void main(String[] args){
+        SelectProperties.findAll().forEach(System.out::println);
+    }
+    public static void loadDataFromXML() {
+        List<Property> propertyList = new ArrayList<>();
+        XMLUtility.process("/Users/homan/homan/data/properties.xml", "property", element -> {
+            var property = new Property(element);
+            propertyList.add(property);
+        });
+        PropertyInsert.process(propertyList);
+    }
+
+    public static void getXML() {
+        XMLUtility.process("/Users/homan/homan/data/properties.xml", "property", element -> {
+            var properties = new Property(element);
+
+            System.out.println(properties);
+        });
+    }
+
+}
