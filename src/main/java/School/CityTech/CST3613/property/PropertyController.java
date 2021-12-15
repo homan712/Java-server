@@ -1,4 +1,4 @@
-package School.CityTech.CST3613.thecounter.controller;
+package School.CityTech.CST3613.property;
 
 import School.CityTech.CST3613.loadxml.Property;
 import School.CityTech.CST3613.loadxml.SelectProperties;
@@ -15,6 +15,6 @@ import java.util.List;
 public class PropertyController {
     @GetMapping("/")
     public List<Property> getList(){
-        return  SelectProperties.findAll();
+        return  propertyDAO.findAll();
     }
 }

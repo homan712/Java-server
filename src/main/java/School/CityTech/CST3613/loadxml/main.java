@@ -1,12 +1,15 @@
 package School.CityTech.CST3613.loadxml;
 
+import School.CityTech.CST3613.piechart.GroupByStateDAO;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class main {
 
     public static void main(String[] args){
-        SelectProperties.findAll().forEach(System.out::println);
+        GroupByStateDAO.findAll().forEach(System.out::println);
+        //SelectProperties.findAll().forEach(System.out::println);
     }
     public static void loadDataFromXML() {
         List<Property> propertyList = new ArrayList<>();
