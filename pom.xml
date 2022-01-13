@@ -58,7 +58,7 @@
 			</plugin>
 		</plugins>
 
-		<finalName>hi-server</finalName>
+		<finalName> wong-server</finalName>
 	</build>
 
 </project>
